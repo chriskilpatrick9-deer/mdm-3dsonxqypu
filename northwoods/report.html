@@ -2,6 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
 <title>2026 Northwoods Deer Hunt: Final Coordinator Report</title><meta name="description" content="2 harvest entries over 9 hunt days at Northwoods (MBRB hunt 24). Hunters logged 37 deer seen in 436 hours, or 8.5 per 100 hours. 1 of 2 entries are listed as recovered (50%); 1 wounded.">
+<script>(function(){try{var t=localStorage.getItem('mbrb-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
 <style>
   :root {
     --bg: #f6f3ec;
@@ -133,12 +134,45 @@
   .pbar { grid-template-columns: 6.5rem 1fr; }
   .bar { grid-template-columns: 6.5rem 1fr 5.4rem; }
   .bar-legend span { white-space: nowrap; }
+
+  .themebtn {
+    float: right;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1.05rem;
+    line-height: 2.15rem;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  html[data-theme="dark"] {
+    --bg: #16181b;
+    --paper: #22262b;
+    --ink: #e8eaed;
+    --muted: #9aa3ab;
+    --line: #3a4148;
+    --accent: #8fbf96;
+    --accent-soft: #243128;
+    --warn-bg: #3a2e18;
+    --warn-ink: #f0c98a;
+    --fill-low: #2c2a22;
+  }
+  html[data-theme="dark"] .banner { border-color: #3d5a40; }
+  html[data-theme="dark"] th { background: #2a2f35; color: var(--muted); }
+  html[data-theme="dark"] .bar .track, html[data-theme="dark"] .pbar .track { background: #3a4148; }
+  html[data-theme="dark"] a { color: var(--accent); }
+  html[data-theme="dark"] .themebtn { background: var(--paper); color: var(--ink); }
 </style></head><body><main>
-<p class="muted crumbs"><a href="../">All parks</a> · <a href="./">Map</a></p>
+<p class="muted crumbs"><a href="../">All parks</a> · <a href="./">Map</a> <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></p>
 <h1>2026 Northwoods Deer Hunt: Final Coordinator Report</h1>
 <p class="lede">2 harvest entries over 9 hunt days at Northwoods (MBRB hunt 24). Hunters logged 37 deer seen in 436 hours, or 8.5 per 100 hours. 1 of 2 entries are listed as recovered (50%); 1 wounded.</p>
-<nav class="muted"><a href="#totals">Totals</a><a href="#map-section">Map</a><a href="#zones">By zone</a><a href="#harvests">Harvests</a><a href="#findings">Findings</a><a href="#weather">Weather</a><a href="#notes">Notes</a></nav>
-<div class="banner"><strong>2026 app data only.</strong> Figures come from the MBRB hunter app for hunt 24 (pages saved Nov 16, 2026 12:55 PM CT). Totals cover hunt days only. This coordinator version embeds the map with hunter pins and names. Share it only with hunt coordinators.</div>
+<nav class="muted"><a href="#totals">Totals</a><a href="#map-section">Map</a><a href="#groups">Hunt groups</a><a href="#zones">Park area</a><a href="#harvests">Harvests</a><a href="#findings">Findings</a><a href="#weather">Weather</a><a href="#notes">Notes</a></nav>
+<div class="banner"><strong>2026 app data only.</strong> Figures come from the MBRB hunter app for hunt 24 (pages saved Nov 16, 2026 2:37 PM CT). Totals cover hunt days only. This coordinator version embeds the map with hunter pins and names. Share it only with hunt coordinators.</div>
 <h2 id="totals">Headline totals</h2>
 <div class="metrics"><div class="metric"><strong>2</strong><span>Harvest entries</span><em>1 adult doe, 1 adult buck · 0 in the 1st period · 2 in the 2nd period · 0 in the 3rd period</em></div><div class="metric"><strong>1 of 2</strong><span>Recovered</span><em>50% recovery · 1 wounded</em></div><div class="metric"><strong>97</strong><span>Hunter sits</span><em>436 hours · 37 deer seen</em></div><div class="metric"><strong>8.5</strong><span>Seen per 100 hours</span><em>8.2 in the 1st · 9.2 in the 2nd · 8.0 in the 3rd</em></div></div>
 <div class="scroll"><table><thead><tr><th></th><th class="num">1st period (Oct 5–7)</th><th class="num">2nd period (Oct 19–21)</th><th class="num">3rd period (Nov 2–4)</th><th class="num">Hunt total</th></tr></thead><tbody><tr><td>Harvest entries</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num">2</td></tr><tr><td>Recovered</td><td class="num">0 of 0</td><td class="num">1 of 2</td><td class="num">0 of 0</td><td class="num">1 of 2</td></tr><tr><td>Hunter sits</td><td class="num">28</td><td class="num">33</td><td class="num">36</td><td class="num">97</td></tr><tr><td>Hours</td><td class="num">134</td><td class="num">152</td><td class="num">150</td><td class="num">436</td></tr><tr><td>Deer seen</td><td class="num">11</td><td class="num">14</td><td class="num">12</td><td class="num">37</td></tr><tr><td>Seen per 100 hours</td><td class="num">8.2</td><td class="num">9.2</td><td class="num">8.0</td><td class="num">8.5</td></tr></tbody></table></div>
@@ -146,23 +180,24 @@
 <p class="caption">The coordinator heatmap: Esri imagery, heat by sightings, and hunter pins with names. Use the layers button to show or hide pins, heat, and zone shading.</p>
 <div class="map-frame"><iframe src="index.html" title="Northwoods coordinator heatmap" loading="eager"></iframe></div>
 <p class="caption"><a href="https://chriskilpatrick9-deer.github.io/mdm-3dsonxqypu/northwoods/">Open full map</a></p>
-<h2 id="zones">By zone</h2>
+<h2 id="groups">By hunt group</h2><p class="caption">These are hunter groups, not geographic zones.</p><div class="scroll"><table><thead><tr><th>Group</th><th class="num">Sits</th><th class="num">Hours</th><th class="num">Seen</th><th class="num">Rate</th><th>Harvests</th></tr></thead><tbody><tr><td>Hunt A</td><td class="num">67</td><td class="num">299</td><td class="num">22</td><td class="num rate">7.4</td><td>1 AD, 1 AB</td></tr><tr><td>Hunt B</td><td class="num">30</td><td class="num">137</td><td class="num">15</td><td class="num rate">10.9</td><td>0</td></tr></tbody></table></div>
+<h2 id="zones">Park area</h2>
 <p class="caption">Rate is deer seen per 100 hunter-hours. AM and PM are based on when the sit started. An asterisk marks a rate with fewer than 50 hunter-hours.</p>
-<div class="scroll"><table><thead><tr><th>Zone</th><th class="num">Sits</th><th class="num">Hours</th><th class="num">Seen</th><th class="num">Rate</th><th>Harvests</th><th class="num">AM rate</th><th class="num">PM rate</th><th class="num">1st period</th><th class="num">2nd period</th><th class="num">3rd period</th></tr></thead><tbody><tr><td>Hunt A <span class=muted>(approx. area)</span></td><td class="num">67</td><td class="num">299</td><td class="num">22</td><td class="num rate">7.4</td><td>1 AD, 1 AB <span class=wounded>1 not recovered</span></td><td class="num">7.5</td><td class="num">7.1</td><td class="num">7.7</td><td class="num">9.2</td><td class="num">0.0*</td></tr><tr><td>Hunt B <span class=muted>(approx. area)</span></td><td class="num">30</td><td class="num">137</td><td class="num">15</td><td class="num rate">10.9</td><td>0</td><td class="num">11.9</td><td class="num">9.0*</td><td class="num">10.2*</td><td class="num">—</td><td class="num">11.1</td></tr></tbody></table></div>
+<div class="scroll"><table><thead><tr><th>Zone</th><th class="num">Sits</th><th class="num">Hours</th><th class="num">Seen</th><th class="num">Rate</th><th>Harvests</th><th class="num">AM rate</th><th class="num">PM rate</th><th class="num">1st period</th><th class="num">2nd period</th><th class="num">3rd period</th></tr></thead><tbody><tr><td>Northwoods Park</td><td class="num">97</td><td class="num">436</td><td class="num">37</td><td class="num rate">8.5</td><td>1 AD, 1 AB <span class=wounded>1 not recovered</span></td><td class="num">9.0</td><td class="num">7.6</td><td class="num">8.2</td><td class="num">9.2</td><td class="num">8.0</td></tr></tbody></table></div>
 <h3>Sightings per 100 hours by zone and period</h3>
 <div class="bar-legend"><span><i style="background:#c3d5c1"></i>1st period (Oct 5–7)</span><span><i style="background:#8aa889"></i>2nd period (Oct 19–21)</span><span><i style="background:#2f5d3a"></i>3rd period (Nov 2–4)</span></div>
 <div class="bars" id="period-bars"></div>
 <h2 id="harvests">Harvests</h2>
-<div class="scroll"><table><thead><tr><th>Date</th><th>Period</th><th>Zone</th><th>Stand type</th><th>Deer</th><th>Status</th></tr></thead><tbody><tr><td>Oct 19</td><td>2nd</td><td>Hunt A</td><td>Saddle</td><td>Adult Buck</td><td><span class=wounded>Wounded</span></td></tr><tr><td>Oct 19</td><td>2nd</td><td>Hunt A</td><td>Saddle</td><td>Adult Doe</td><td>Recovered</td></tr></tbody></table></div>
+<div class="scroll"><table><thead><tr><th>Date</th><th>Period</th><th>Group</th><th>Stand type</th><th>Deer</th><th>Status</th></tr></thead><tbody><tr><td>Oct 19</td><td>2nd</td><td>Hunt A</td><td>Saddle</td><td>Adult Buck</td><td><span class=wounded>Wounded</span></td></tr><tr><td>Oct 19</td><td>2nd</td><td>Hunt A</td><td>Saddle</td><td>Adult Doe</td><td>Recovered</td></tr></tbody></table></div>
 <h2 id="findings">Findings</h2>
-<ul><li>Highest sighting rate: Hunt B at 10.9 per 100 hours; lowest: Hunt A at 7.4 (zones with at least 50 hunter-hours).</li><li>By period: 1st 8.2 per 100 h over 134 h, 0 harvests; 2nd 9.2 per 100 h over 152 h, 2 harvests; 3rd 8.0 per 100 h over 150 h, 0 harvests.</li><li>Sits started in the morning saw 9.0 per 100 h (265 h); afternoon sits 7.6 per 100 h (171 h).</li><li>Recovery: 1 of 2 harvest entries (50%); not recovered: 1 wounded.</li></ul>
+<ul><li>Highest sighting rate: Northwoods Park at 8.5 per 100 hours; lowest: Northwoods Park at 8.5 (zones with at least 50 hunter-hours).</li><li>By period: 1st 8.2 per 100 h over 134 h, 0 harvests; 2nd 9.2 per 100 h over 152 h, 2 harvests; 3rd 8.0 per 100 h over 150 h, 0 harvests.</li><li>Sits started in the morning saw 9.0 per 100 h (265 h); afternoon sits 7.6 per 100 h (171 h).</li><li>Recovery: 1 of 2 harvest entries (50%); not recovered: 1 wounded.</li><li>Hunt A logged 7.4 per 100 h (299 h); Hunt B 10.9 per 100 h (137 h).</li></ul>
 <p class="caption">Sightings per 100 hunter-hours by wind direction, with each hour of a sit matched to that hour’s wind and a sit’s sightings shared evenly across its hours. Directions with under 10 hours are omitted; * = under 50 hours.</p><div class="bars" id="wind-bars"></div>
 <h2 id="weather">Day-by-day weather</h2>
-<p class="caption">Hourly weather from Open-Meteo for the park centre (about 45.13°N, 93.38°W). Wind is the daily mean speed and vector-mean direction.</p>
+<p class="caption">Hourly weather from Open-Meteo for the park centre (about 45.15°N, 93.37°W). Wind is the daily mean speed and vector-mean direction.</p>
 <div class="scroll"><table><thead><tr><th>Day</th><th>Period</th><th class="num">Low / high</th><th>Wind</th><th class="num">Gusts</th><th>Pressure</th><th>Sunrise / sunset</th></tr></thead><tbody><tr><td>Mon, Oct 5</td><td>1st</td><td class="num">39 / 68°F</td><td>SE, 4.9 mph</td><td class="num">20 mph</td><td>Falling</td><td>7:16 AM / 6:46 PM</td></tr><tr><td>Tue, Oct 6</td><td>1st</td><td class="num">57 / 83°F</td><td>SW, 7.9 mph</td><td class="num">30 mph</td><td>Falling</td><td>7:17 AM / 6:44 PM</td></tr><tr><td>Wed, Oct 7</td><td>1st</td><td class="num">49 / 74°F</td><td>WNW, 7.7 mph</td><td class="num">37 mph</td><td>Rising</td><td>7:19 AM / 6:42 PM</td></tr><tr><td>Mon, Oct 19</td><td>2nd</td><td class="num">38 / 67°F</td><td>ESE, 3.2 mph</td><td class="num">13 mph</td><td>Rising</td><td>7:34 AM / 6:21 PM</td></tr><tr><td>Tue, Oct 20</td><td>2nd</td><td class="num">39 / 68°F</td><td>S, 5 mph</td><td class="num">21 mph</td><td>Falling</td><td>7:36 AM / 6:19 PM</td></tr><tr><td>Wed, Oct 21</td><td>2nd</td><td class="num">45 / 73°F</td><td>S, 2.8 mph</td><td class="num">12 mph</td><td>Steady</td><td>7:37 AM / 6:17 PM</td></tr><tr><td>Mon, Nov 2</td><td>3rd</td><td class="num">57 / 64°F</td><td>SSE, 12.9 mph</td><td class="num">40 mph</td><td>Falling</td><td>6:53 AM / 4:59 PM</td></tr><tr><td>Tue, Nov 3</td><td>3rd</td><td class="num">53 / 64°F</td><td>NNW, 8.3 mph</td><td class="num">30 mph</td><td>Steady</td><td>6:55 AM / 4:58 PM</td></tr><tr><td>Wed, Nov 4</td><td>3rd</td><td class="num">48 / 53°F</td><td>W, 7.5 mph</td><td class="num">26 mph</td><td>Rising</td><td>6:56 AM / 4:57 PM</td></tr></tbody></table></div>
 <h2 id="notes">Notes</h2>
-<ul><li>Hunt days are Oct 5–7 (1st period); Oct 19–21 (2nd period); Nov 2–4 (3rd period), as listed on the MBRB hunt page. Stand-setup days (Oct 4, Oct 18, Nov 1) and any sits on other dates are not in the statistics.</li><li>Hunt A, Hunt B have no outline in the MBRB app; the map shows an approximate area (dashed).</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. Dates are as entered in the app.</li></ul>
-<footer>Northwoods · MBRB hunt 24 · 2026 app data · report generated Nov 16, 2026 1:23 PM CT</footer>
+<ul><li>Hunt days are Oct 5–7 (1st period); Oct 19–21 (2nd period); Nov 2–4 (3rd period), as listed on the MBRB hunt page. Stand-setup days (Oct 4, Oct 18, Nov 1) and any sits on other dates are not in the statistics.</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. Dates are as entered in the app.</li><li>Hunt A and Hunt B are hunter groups (who hunted), not separate areas of the park. The map shows the park as one area.</li></ul>
+<footer>Northwoods · MBRB hunt 24 · 2026 app data · report generated Nov 16, 2026 2:38 PM CT</footer>
 </main>
 <script>
 const COL=["#c3d5c1", "#8aa889", "#2f5d3a"];
@@ -175,6 +210,12 @@ function renderPeriodBars(el, rows) {
   el.innerHTML = rows.map((r) => `<div class="pbar"><div class="lbl">${r.label}</div><div class="pair" style="grid-template-columns:repeat(${r.v.length},1fr)">` +
     r.v.map((v, i) => `<div class="col"><div class="track"><div class="fill" style="background:${COL[i]};width:${v === null ? 0 : Math.max(2, v / max * 100)}%"></div></div><div class="val">${v === null ? '—' : v.toFixed(1) + (r.lo[i] ? '*' : '')}</div></div>`).join("") + `</div></div>`).join("");
 }
-renderPeriodBars(document.getElementById("period-bars"), [{"label": "Hunt A", "v": [7.7, 9.2, 0.0], "lo": [false, false, true]}, {"label": "Hunt B", "v": [10.2, null, 11.1], "lo": [true, false, false]}]);
+renderPeriodBars(document.getElementById("period-bars"), [{"label": "Northwoods Park", "v": [8.2, 9.2, 8.0], "lo": [false, false, false]}]);
 renderBars(document.getElementById("wind-bars"), [{"label": "N", "value": 4.0, "display": "4.0* \u00b7 43 h"}, {"label": "E", "value": 9.0, "display": "9.0* \u00b7 24 h"}, {"label": "SE", "value": 12.2, "display": "12.2 \u00b7 108 h", "peak": true}, {"label": "S", "value": 7.0, "display": "7.0 \u00b7 113 h"}, {"label": "SW", "value": 2.9, "display": "2.9 \u00b7 53 h"}, {"label": "W", "value": 3.2, "display": "3.2 \u00b7 53 h"}, {"label": "NW", "value": 8.4, "display": "8.4* \u00b7 33 h"}]);
+(function(){const KEY='mbrb-theme',btn=document.getElementById('themebtn');
+ function sys(){try{return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){return 'light'}}
+ function cur(){try{const t=localStorage.getItem(KEY);if(t==='dark'||t==='light')return t}catch(e){} return sys()}
+ function paint(t){document.documentElement.setAttribute('data-theme',t);if(btn){const d=t==='dark';btn.textContent=d?'☀':'☾';btn.title=d?'Light mode':'Dark mode';btn.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}}
+ paint(cur());if(btn)btn.onclick=()=>{const t=cur()==='dark'?'light':'dark';try{localStorage.setItem(KEY,t)}catch(e){}paint(t)};
+ try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem(KEY))return}catch(x){}paint(e.matches?'dark':'light')})}catch(e){}})();
 </script></body></html>

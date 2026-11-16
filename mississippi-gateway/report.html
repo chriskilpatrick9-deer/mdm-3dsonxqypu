@@ -2,6 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
 <title>2026 Mississippi Gateway Regional Park Deer Hunt: Final Coordinator Report</title><meta name="description" content="24 harvest entries over 7 hunt days at Mississippi Gateway Regional Park (MBRB hunt 16). Hunters logged 411 deer seen in 656 hours, or 62.7 per 100 hours. 21 of 24 entries are listed as recovered (88%); 3 wounded.">
+<script>(function(){try{var t=localStorage.getItem('mbrb-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
 <style>
   :root {
     --bg: #f6f3ec;
@@ -133,12 +134,45 @@
   .pbar { grid-template-columns: 6.5rem 1fr; }
   .bar { grid-template-columns: 6.5rem 1fr 5.4rem; }
   .bar-legend span { white-space: nowrap; }
+
+  .themebtn {
+    float: right;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1.05rem;
+    line-height: 2.15rem;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  html[data-theme="dark"] {
+    --bg: #16181b;
+    --paper: #22262b;
+    --ink: #e8eaed;
+    --muted: #9aa3ab;
+    --line: #3a4148;
+    --accent: #8fbf96;
+    --accent-soft: #243128;
+    --warn-bg: #3a2e18;
+    --warn-ink: #f0c98a;
+    --fill-low: #2c2a22;
+  }
+  html[data-theme="dark"] .banner { border-color: #3d5a40; }
+  html[data-theme="dark"] th { background: #2a2f35; color: var(--muted); }
+  html[data-theme="dark"] .bar .track, html[data-theme="dark"] .pbar .track { background: #3a4148; }
+  html[data-theme="dark"] a { color: var(--accent); }
+  html[data-theme="dark"] .themebtn { background: var(--paper); color: var(--ink); }
 </style></head><body><main>
-<p class="muted crumbs"><a href="../">All parks</a> · <a href="./">Map</a></p>
+<p class="muted crumbs"><a href="../">All parks</a> · <a href="./">Map</a> <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></p>
 <h1>2026 Mississippi Gateway Regional Park Deer Hunt: Final Coordinator Report</h1>
 <p class="lede">24 harvest entries over 7 hunt days at Mississippi Gateway Regional Park (MBRB hunt 16). Hunters logged 411 deer seen in 656 hours, or 62.7 per 100 hours. 21 of 24 entries are listed as recovered (88%); 3 wounded.</p>
 <nav class="muted"><a href="#totals">Totals</a><a href="#map-section">Map</a><a href="#zones">By zone</a><a href="#harvests">Harvests</a><a href="#findings">Findings</a><a href="#weather">Weather</a><a href="#notes">Notes</a></nav>
-<div class="banner"><strong>2026 app data only.</strong> Figures come from the MBRB hunter app for hunt 16 (pages saved Nov 16, 2026 12:55 PM CT). Totals cover hunt days only. This coordinator version embeds the map with hunter pins and names. Share it only with hunt coordinators.</div>
+<div class="banner"><strong>2026 app data only.</strong> Figures come from the MBRB hunter app for hunt 16 (pages saved Nov 16, 2026 2:37 PM CT). Totals cover hunt days only. This coordinator version embeds the map with hunter pins and names. Share it only with hunt coordinators.</div>
 <h2 id="totals">Headline totals</h2>
 <div class="metrics"><div class="metric"><strong>24</strong><span>Harvest entries</span><em>14 adult does, 1 fawn doe, 2 fawn bucks, 7 adult bucks · 15 in the 1st period · 7 in the 2nd period</em></div><div class="metric"><strong>21 of 24</strong><span>Recovered</span><em>88% recovery · 3 wounded</em></div><div class="metric"><strong>98</strong><span>Hunter sits</span><em>656 hours · 411 deer seen</em></div><div class="metric"><strong>62.7</strong><span>Seen per 100 hours</span><em>61.5 in the 1st · 64.3 in the 2nd</em></div></div>
 <div class="scroll"><table><thead><tr><th></th><th class="num">1st period (Oct 19–21)</th><th class="num">2nd period (Nov 2–5)</th><th class="num">Hunt total</th></tr></thead><tbody><tr><td>Harvest entries</td><td class="num">15</td><td class="num">7</td><td class="num">24</td></tr><tr><td>Recovered</td><td class="num">13 of 15</td><td class="num">7 of 7</td><td class="num">21 of 24</td></tr><tr><td>Hunter sits</td><td class="num">51</td><td class="num">47</td><td class="num">98</td></tr><tr><td>Hours</td><td class="num">387</td><td class="num">269</td><td class="num">656</td></tr><tr><td>Deer seen</td><td class="num">238</td><td class="num">173</td><td class="num">411</td></tr><tr><td>Seen per 100 hours</td><td class="num">61.5</td><td class="num">64.3</td><td class="num">62.7</td></tr></tbody></table></div>
@@ -146,6 +180,7 @@
 <p class="caption">The coordinator heatmap: Esri imagery, heat by sightings, and hunter pins with names. Use the layers button to show or hide pins, heat, and zone shading.</p>
 <div class="map-frame"><iframe src="index.html" title="Mississippi Gateway Regional Park coordinator heatmap" loading="eager"></iframe></div>
 <p class="caption"><a href="https://chriskilpatrick9-deer.github.io/mdm-3dsonxqypu/mississippi-gateway/">Open full map</a></p>
+
 <h2 id="zones">By zone</h2>
 <p class="caption">Rate is deer seen per 100 hunter-hours. AM and PM are based on when the sit started. An asterisk marks a rate with fewer than 50 hunter-hours.</p>
 <div class="scroll"><table><thead><tr><th>Zone</th><th class="num">Sits</th><th class="num">Hours</th><th class="num">Seen</th><th class="num">Rate</th><th>Harvests</th><th class="num">AM rate</th><th class="num">PM rate</th><th class="num">1st period</th><th class="num">2nd period</th></tr></thead><tbody><tr><td>Zone 1</td><td class="num">54</td><td class="num">382</td><td class="num">173</td><td class="num rate">45.3</td><td>8 AD, 2 FB, 4 AB <span class=wounded>2 not recovered</span></td><td class="num">40.5</td><td class="num">68.0</td><td class="num">48.3</td><td class="num">41.1</td></tr><tr><td>Zone 2</td><td class="num">44</td><td class="num">274</td><td class="num">238</td><td class="num rate">86.7</td><td>6 AD, 1 FD, 3 AB <span class=wounded>1 not recovered</span></td><td class="num">81.2</td><td class="num">100.9</td><td class="num">80.0</td><td class="num">96.4</td></tr></tbody></table></div>
@@ -162,7 +197,7 @@
 <div class="scroll"><table><thead><tr><th>Day</th><th>Period</th><th class="num">Low / high</th><th>Wind</th><th class="num">Gusts</th><th>Pressure</th><th>Sunrise / sunset</th></tr></thead><tbody><tr><td>Mon, Oct 19</td><td>1st</td><td class="num">39 / 67°F</td><td>ESE, 3 mph</td><td class="num">12 mph</td><td>Rising</td><td>7:34 AM / 6:21 PM</td></tr><tr><td>Tue, Oct 20</td><td>1st</td><td class="num">40 / 69°F</td><td>SSE, 4.8 mph</td><td class="num">19 mph</td><td>Falling</td><td>7:35 AM / 6:19 PM</td></tr><tr><td>Wed, Oct 21</td><td>1st</td><td class="num">46 / 74°F</td><td>S, 2.5 mph</td><td class="num">11 mph</td><td>Steady</td><td>7:37 AM / 6:17 PM</td></tr><tr><td>Mon, Nov 2</td><td>2nd</td><td class="num">57 / 64°F</td><td>SSE, 12.5 mph</td><td class="num">40 mph</td><td>Falling</td><td>6:53 AM / 4:59 PM</td></tr><tr><td>Tue, Nov 3</td><td>2nd</td><td class="num">53 / 65°F</td><td>NNW, 7.8 mph</td><td class="num">29 mph</td><td>Steady</td><td>6:54 AM / 4:58 PM</td></tr><tr><td>Wed, Nov 4</td><td>2nd</td><td class="num">48 / 53°F</td><td>WSW, 7.2 mph</td><td class="num">26 mph</td><td>Rising</td><td>6:56 AM / 4:56 PM</td></tr><tr><td>Thu, Nov 5</td><td>2nd</td><td class="num">38 / 50°F</td><td>N, 9.5 mph</td><td class="num">31 mph</td><td>Rising</td><td>6:57 AM / 4:55 PM</td></tr></tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul><li>Hunt days are Oct 19–21 (1st period); Nov 2–5 (2nd period), as listed on the MBRB hunt page. Stand-setup days (Oct 18, Nov 1) and any sits on other dates are not in the statistics.</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. Dates are as entered in the app.</li></ul>
-<footer>Mississippi Gateway Regional Park · MBRB hunt 16 · 2026 app data · report generated Nov 16, 2026 1:23 PM CT</footer>
+<footer>Mississippi Gateway Regional Park · MBRB hunt 16 · 2026 app data · report generated Nov 16, 2026 2:38 PM CT</footer>
 </main>
 <script>
 const COL=["#8aa889", "#2f5d3a"];
@@ -177,4 +212,10 @@ function renderPeriodBars(el, rows) {
 }
 renderPeriodBars(document.getElementById("period-bars"), [{"label": "Zone 1", "v": [48.3, 41.1], "lo": [false, false]}, {"label": "Zone 2", "v": [80.0, 96.4], "lo": [false, false]}]);
 renderBars(document.getElementById("wind-bars"), [{"label": "N", "value": 75.3, "display": "75.3 \u00b7 59 h"}, {"label": "E", "value": 88.7, "display": "88.7* \u00b7 38 h"}, {"label": "SE", "value": 79.6, "display": "79.6 \u00b7 110 h", "peak": true}, {"label": "S", "value": 62.4, "display": "62.4 \u00b7 159 h"}, {"label": "SW", "value": 45.7, "display": "45.7 \u00b7 71 h"}, {"label": "W", "value": 50.4, "display": "50.4* \u00b7 31 h"}, {"label": "NW", "value": 87.9, "display": "87.9* \u00b7 38 h"}]);
+(function(){const KEY='mbrb-theme',btn=document.getElementById('themebtn');
+ function sys(){try{return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){return 'light'}}
+ function cur(){try{const t=localStorage.getItem(KEY);if(t==='dark'||t==='light')return t}catch(e){} return sys()}
+ function paint(t){document.documentElement.setAttribute('data-theme',t);if(btn){const d=t==='dark';btn.textContent=d?'☀':'☾';btn.title=d?'Light mode':'Dark mode';btn.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}}
+ paint(cur());if(btn)btn.onclick=()=>{const t=cur()==='dark'?'light':'dark';try{localStorage.setItem(KEY,t)}catch(e){}paint(t)};
+ try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem(KEY))return}catch(x){}paint(e.matches?'dark':'light')})}catch(e){}})();
 </script></body></html>
