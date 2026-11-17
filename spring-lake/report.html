@@ -177,6 +177,27 @@
   }
   .wx-analysis li { margin: 0.55rem 0; }
   table { min-width: 42rem; }
+
+  .srec { margin: 1rem 0 0.4rem; }
+  .srec-h { font-size: 1.05rem; font-weight: 650; margin: 1.3rem 0 0.4rem; }
+  .srec-leg { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; font-size: 0.82rem; color: var(--muted); margin: 0 0 0.55rem; }
+  .srec-leg i { display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 2px; margin-right: 0.3rem; vertical-align: -1px; }
+  .srow { display: grid; grid-template-columns: 7.2rem 1fr 7.2rem; gap: 0.45rem; align-items: center; font-size: 0.88rem; margin: 0 0 0.4rem; }
+  .srow .lbl { color: var(--muted); }
+  .srow .track { background: #ece6d8; border-radius: 4px; height: 0.7rem; overflow: hidden; display: flex; }
+  .srow .seg { display: block; height: 100%; min-width: 0; }
+  .srow .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+  .st-rec { background: var(--accent); }
+  .st-wnd { background: #b5451b; }
+  .st-ns, .st-ot { background: #8a7a5a; }
+  html[data-theme="dark"] .srow .track { background: #3a4148; }
+  html[data-theme="dark"] .st-rec { background: var(--accent); }
+  html[data-theme="dark"] .st-wnd { background: #e07a4c; }
+  html[data-theme="dark"] .st-ns, html[data-theme="dark"] .st-ot { background: #c4b48a; }
+  @media (max-width: 520px) {
+    .srow { grid-template-columns: 5.6rem 1fr 5.4rem; font-size: 0.8rem; }
+    .srow .val { white-space: normal; }
+  }
 </style></head><body><main>
 <p class="muted crumbs"><a href="../">All parks</a> · <a href="./">Map</a> <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></p>
 <h1>2026 Spring Lake Park Reserve Deer Hunt: Final Coordinator Report</h1>
@@ -199,6 +220,7 @@
 <div class="bars" id="period-bars"></div>
 <h2 id="harvests">Harvests</h2>
 <div class="scroll"><table><thead><tr><th>Date</th><th>Period</th><th>Zone</th><th>Stand type</th><th>Deer</th><th>Status</th></tr></thead><tbody><tr><td>Sep 28</td><td>1st</td><td>Zone 2</td><td>Saddle</td><td>Fawn Buck</td><td>Recovered</td></tr><tr><td>Sep 29</td><td>1st</td><td>Zone 2</td><td>Saddle</td><td>Adult Doe</td><td>Recovered</td></tr><tr><td>Sep 29</td><td>1st</td><td>Zone 2</td><td>Saddle</td><td>Fawn Doe</td><td><span class=wounded>Wounded</span></td></tr><tr><td>Sep 30</td><td>1st</td><td>SLP</td><td>Ladder</td><td>Fawn Buck</td><td>Recovered</td></tr><tr><td>Nov 3</td><td>2nd</td><td>Zone 2</td><td>Saddle</td><td>Adult Doe</td><td>Recovered</td></tr></tbody></table></div>
+<div class="srec"><div class="srec-h">Recovery by stand type</div><div class="srec-leg"><span><i class="st-rec"></i>Recovered</span><span><i class="st-wnd"></i>Wounded</span></div><div class="srow"><span class="lbl">Saddle</span><span class="track"><span class="seg st-rec" style="width:75.000%" title="Recovered: 3"></span><span class="seg st-wnd" style="width:25.000%" title="Wounded: 1"></span></span><span class="val">3 of 4 (75%)</span></div><div class="srow"><span class="lbl">Ladder</span><span class="track"><span class="seg st-rec" style="width:100.000%" title="Recovered: 1"></span></span><span class="val">1 of 1 (100%)</span></div></div>
 <h2 id="findings">Findings</h2>
 <ul><li>Highest sighting rate: SLP at 10.0 per 100 hours; lowest: SLP at 10.0 (zones with at least 50 hunter-hours).</li><li>By period: 1st 10.1 per 100 h over 188 h, 4 harvests; 2nd 36.5 per 100 h over 47 h, 1 harvest.</li><li>Sits started in the morning saw 16.1 per 100 h (168 h); afternoon sits 13.6 per 100 h (66 h).</li><li>Recovery: 4 of 5 harvest entries (80%); not recovered: 1 wounded.</li></ul>
 <p class="caption">Sightings per 100 hunter-hours by wind direction, with each hour of a sit matched to that hour’s wind and a sit’s sightings shared evenly across its hours. Directions with under 10 hours are omitted; * = under 50 hours.</p><div class="bars" id="wind-bars"></div>
@@ -208,7 +230,7 @@
 <h3 id="weather-analysis">Weather and deer activity</h3><p class="caption">Sighting and harvest rates compared with each hunt day’s temperature, wind, pressure, and moon. These comparisons are observational.</p><ul class="wx-analysis"><li>Over 4 hunt days with at least 8 hunter-hours, hunters saw 15.5 deer per 100 hours and recorded 5 harvests in 51 sits. With only 4 hunt days, these patterns are suggestive, not conclusive. 3 listed hunt days had too few hours to include.</li><li>Days with rising pressure (Sep 30) had 4.0 per 100 hours and 1 harvest in 15 sits (6.7 per 100 sits), compared with 14.1 per 100 hours and 3 harvests in 23 sits (13.0 per 100 sits) on days with falling pressure (Sep 28–29). 1 day had steady pressure.</li><li>Calmer days (Sep 28 and Sep 30, about 3–4 mph) had 11.4 per 100 hours and 2 harvests in 30 sits (6.7 per 100 sits), compared with 25.0 per 100 hours and 3 harvests in 21 sits (14.3 per 100 sits) on windier days (Sep 29 and Nov 3, about 8–9 mph).</li><li>Sits that started in the morning had 16.0 per 100 hours and 3 harvests in 31 sits (9.7 per 100 sits), with sit-time temperatures averaging 61°F. Afternoon sits had 10.9 per 100 hours and 1 harvest in 12 sits (8.3 per 100 sits), with sit-time temperatures around 70°F.</li><li>The highest sighting rate was on Nov 3 (42.6 per 100 hours, 1 harvest, 52–64°F, NW at 9 mph, steady pressure).</li></ul>
 <h2 id="notes">Notes</h2>
 <ul><li>Hunt days are Sep 28–30 (1st period); Nov 2–5 (2nd period), as listed on the MBRB hunt page. Stand-setup days (Sep 27, Nov 1) and any sits on other dates are not in the statistics.</li><li>SLP has no outline in the MBRB app; the map shows an approximate area (dashed).</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. A harvest is dated from the hunter’s matching sit when the logged date has no sit; otherwise the date is as entered in the app.</li><li>Weather is hourly Open-Meteo data at the park centre. The weather analysis covers hunt days only (no setup days) and is observational — with few days it is suggestive, not conclusive.</li></ul>
-<footer>Spring Lake Park Reserve · MBRB hunt 17 · 2026 app data · report generated Nov 17, 2026 8:23 AM CT</footer>
+<footer>Spring Lake Park Reserve · MBRB hunt 17 · 2026 app data · report generated Nov 17, 2026 8:38 AM CT</footer>
 </main>
 <script>
 const COL=["#8aa889", "#2f5d3a"];

@@ -177,6 +177,27 @@
   }
   .wx-analysis li { margin: 0.55rem 0; }
   table { min-width: 42rem; }
+
+  .srec { margin: 1rem 0 0.4rem; }
+  .srec-h { font-size: 1.05rem; font-weight: 650; margin: 1.3rem 0 0.4rem; }
+  .srec-leg { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; font-size: 0.82rem; color: var(--muted); margin: 0 0 0.55rem; }
+  .srec-leg i { display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 2px; margin-right: 0.3rem; vertical-align: -1px; }
+  .srow { display: grid; grid-template-columns: 7.2rem 1fr 7.2rem; gap: 0.45rem; align-items: center; font-size: 0.88rem; margin: 0 0 0.4rem; }
+  .srow .lbl { color: var(--muted); }
+  .srow .track { background: #ece6d8; border-radius: 4px; height: 0.7rem; overflow: hidden; display: flex; }
+  .srow .seg { display: block; height: 100%; min-width: 0; }
+  .srow .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+  .st-rec { background: var(--accent); }
+  .st-wnd { background: #b5451b; }
+  .st-ns, .st-ot { background: #8a7a5a; }
+  html[data-theme="dark"] .srow .track { background: #3a4148; }
+  html[data-theme="dark"] .st-rec { background: var(--accent); }
+  html[data-theme="dark"] .st-wnd { background: #e07a4c; }
+  html[data-theme="dark"] .st-ns, html[data-theme="dark"] .st-ot { background: #c4b48a; }
+  @media (max-width: 520px) {
+    .srow { grid-template-columns: 5.6rem 1fr 5.4rem; font-size: 0.8rem; }
+    .srow .val { white-space: normal; }
+  }
 </style></head><body><main>
 <p class="muted crumbs"><a href="../">All parks</a> · <a href="./">Map</a> <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></p>
 <h1>2026 Northwoods Deer Hunt: Final Coordinator Report</h1>
@@ -199,6 +220,7 @@
 <div class="bars" id="period-bars"></div>
 <h2 id="harvests">Harvests</h2>
 <div class="scroll"><table><thead><tr><th>Date</th><th>Period</th><th>Group</th><th>Stand type</th><th>Deer</th><th>Status</th></tr></thead><tbody><tr><td>Oct 19</td><td>2nd</td><td>Hunt A</td><td>Saddle</td><td>Adult Buck</td><td><span class=wounded>Wounded</span></td></tr><tr><td>Oct 19</td><td>2nd</td><td>Hunt A</td><td>Saddle</td><td>Adult Doe</td><td>Recovered</td></tr></tbody></table></div>
+<div class="srec"><div class="srec-h">Recovery by stand type</div><div class="srec-leg"><span><i class="st-rec"></i>Recovered</span><span><i class="st-wnd"></i>Wounded</span></div><div class="srow"><span class="lbl">Saddle</span><span class="track"><span class="seg st-rec" style="width:50.000%" title="Recovered: 1"></span><span class="seg st-wnd" style="width:50.000%" title="Wounded: 1"></span></span><span class="val">1 of 2 (50%)</span></div></div>
 <h2 id="findings">Findings</h2>
 <ul><li>Highest sighting rate: Northwoods Park at 8.5 per 100 hours; lowest: Northwoods Park at 8.5 (zones with at least 50 hunter-hours).</li><li>By period: 1st 8.2 per 100 h over 134 h, 0 harvests; 2nd 9.2 per 100 h over 152 h, 2 harvests; 3rd 8.0 per 100 h over 150 h, 0 harvests.</li><li>Sits started in the morning saw 9.0 per 100 h (265 h); afternoon sits 7.6 per 100 h (171 h).</li><li>Recovery: 1 of 2 harvest entries (50%); not recovered: 1 wounded.</li><li>Hunt A logged 7.4 per 100 h (299 h); Hunt B 10.9 per 100 h (137 h).</li></ul>
 <p class="caption">Sightings per 100 hunter-hours by wind direction, with each hour of a sit matched to that hour’s wind and a sit’s sightings shared evenly across its hours. Directions with under 10 hours are omitted; * = under 50 hours.</p><div class="bars" id="wind-bars"></div>
@@ -208,7 +230,7 @@
 <h3 id="weather-analysis">Weather and deer activity</h3><p class="caption">Sighting and harvest rates compared with each hunt day’s temperature, wind, pressure, and moon. These comparisons are observational.</p><ul class="wx-analysis"><li>Over 9 hunt days with at least 8 hunter-hours, hunters saw 8.5 deer per 100 hours and recorded 2 harvests in 97 sits. With only 9 hunt days, these patterns are suggestive, not conclusive.</li><li>The colder days (Oct 5, Oct 19–20, and Nov 4, lows 38–48°F) had 11.1 per 100 hours and 2 harvests in 44 sits (4.5 per 100 sits), compared with 5.9 per 100 hours and no harvests in 41 sits on the warmer days (Oct 6–7, Oct 21, and Nov 2, lows 45–57°F).</li><li>Days with rising pressure (Oct 7, Oct 19, and Nov 4) had 8.3 per 100 hours and 2 harvests in 30 sits (6.7 per 100 sits), compared with 10.8 per 100 hours and no harvests in 44 sits on days with falling pressure (Oct 5–6, Oct 20, and Nov 2). 2 days had steady pressure.</li><li>Calmer days (Oct 5 and Oct 19–21, about 3–5 mph) had 10.6 per 100 hours and 2 harvests in 43 sits (4.7 per 100 sits), compared with 6.9 per 100 hours and no harvests in 42 sits on windier days (Oct 6–7 and Nov 2–3, about 8–13 mph).</li><li>Sits that started in the morning had 9.0 per 100 hours and 1 harvest in 51 sits (2.0 per 100 sits), with sit-time temperatures averaging 53°F. Afternoon sits had 7.6 per 100 hours and 1 harvest in 46 sits (2.2 per 100 sits), with sit-time temperatures averaging 65°F.</li><li>The highest sighting rate was on Oct 19 (16.0 per 100 hours, 2 harvests, 38–67°F, ESE at 3.2 mph, rising pressure).</li></ul>
 <h2 id="notes">Notes</h2>
 <ul><li>Hunt days are Oct 5–7 (1st period); Oct 19–21 (2nd period); Nov 2–4 (3rd period), as listed on the MBRB hunt page. Stand-setup days (Oct 4, Oct 18, Nov 1) and any sits on other dates are not in the statistics.</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. A harvest is dated from the hunter’s matching sit when the logged date has no sit; otherwise the date is as entered in the app.</li><li>Weather is hourly Open-Meteo data at the park centre. The weather analysis covers hunt days only (no setup days) and is observational — with few days it is suggestive, not conclusive.</li><li>Hunt A and Hunt B are hunter groups (who hunted), not separate areas of the park. The map shows the park as one area.</li></ul>
-<footer>Northwoods · MBRB hunt 24 · 2026 app data · report generated Nov 17, 2026 8:23 AM CT</footer>
+<footer>Northwoods · MBRB hunt 24 · 2026 app data · report generated Nov 17, 2026 8:38 AM CT</footer>
 </main>
 <script>
 const COL=["#c3d5c1", "#8aa889", "#2f5d3a"];
