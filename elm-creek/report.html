@@ -78,7 +78,7 @@
     border-radius: 10px;
     background: var(--paper);
   }
-  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 36rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 42rem; }
   th, td { padding: 0.5rem 0.65rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
   th { font-size: 0.78rem; text-transform: none; letter-spacing: 0; color: var(--muted); font-weight: 600; background: #f3eee4; position: sticky; top: 0; }
   td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
@@ -167,6 +167,16 @@
   html[data-theme="dark"] .bar .track, html[data-theme="dark"] .pbar .track { background: #3a4148; }
   html[data-theme="dark"] a { color: var(--accent); }
   html[data-theme="dark"] .themebtn { background: var(--paper); color: var(--ink); }
+
+  .wx-analysis {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.55rem 1.1rem 0.65rem;
+    margin: 0.7rem 0 1rem;
+  }
+  .wx-analysis li { margin: 0.55rem 0; }
+  table { min-width: 42rem; }
 </style></head><body><main>
 <p class="muted crumbs"><a href="../">All parks</a> · <a href="./">Map</a> <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></p>
 <h1>2026 Elm Creek Park Reserve Deer Hunt: Final Coordinator Report</h1>
@@ -193,11 +203,12 @@
 <ul><li>Highest sighting rate: Zone 9 at 29.6 per 100 hours; lowest: Zone 5 at 4.3 (zones with at least 50 hunter-hours).</li><li>Sits started in the morning saw 16.2 per 100 h (1,743 h); afternoon sits 24.0 per 100 h (753 h).</li><li>Recovery: 36 of 40 harvest entries (90%); not recovered: 4 wounded.</li></ul>
 <p class="caption">Sightings per 100 hunter-hours by wind direction, with each hour of a sit matched to that hour’s wind and a sit’s sightings shared evenly across its hours. Directions with under 10 hours are omitted; * = under 50 hours.</p><div class="bars" id="wind-bars"></div>
 <h2 id="weather">Day-by-day weather</h2>
-<p class="caption">Hourly weather from Open-Meteo for the park centre (about 45.17°N, 93.44°W). Wind is the daily mean speed and vector-mean direction.</p>
-<div class="scroll"><table><thead><tr><th>Day</th><th class="num">Low / high</th><th>Wind</th><th class="num">Gusts</th><th>Pressure</th><th>Sunrise / sunset</th></tr></thead><tbody><tr><td>Fri, Oct 16</td><td class="num">35 / 52°F</td><td>NNW, 12.2 mph</td><td class="num">41 mph</td><td>Rising</td><td>7:31 AM / 6:26 PM</td></tr><tr><td>Sat, Oct 17</td><td class="num">32 / 61°F</td><td>SSW, 9.3 mph</td><td class="num">33 mph</td><td>Falling</td><td>7:32 AM / 6:25 PM</td></tr><tr><td>Sun, Oct 18</td><td class="num">47 / 71°F</td><td>SSW, 9 mph</td><td class="num">36 mph</td><td>Rising</td><td>7:33 AM / 6:23 PM</td></tr></tbody></table></div>
+<p class="caption">Hourly weather from Open-Meteo for the park centre (about 45.17°N, 93.44°W). Wind is the daily mean speed and vector-mean direction. Pressure is the day’s trend and morning-to-evening reading (inches of mercury).</p>
+<div class="scroll"><table><thead><tr><th>Day</th><th class="num">Low / high</th><th>Wind</th><th class="num">Gusts</th><th>Pressure</th><th>Moon</th><th>Sunrise / sunset</th></tr></thead><tbody><tr><td>Fri, Oct 16</td><td class="num">35 / 52°F</td><td>NNW, 12.2 mph</td><td class="num">41 mph</td><td>Rising 30.02–30.50</td><td>Waxing Crescent, 29%</td><td>7:31 AM / 6:26 PM</td></tr><tr><td>Sat, Oct 17</td><td class="num">32 / 61°F</td><td>SSW, 9.3 mph</td><td class="num">33 mph</td><td>Falling 30.50–30.10</td><td>First Quarter, 39%</td><td>7:32 AM / 6:25 PM</td></tr><tr><td>Sun, Oct 18</td><td class="num">47 / 71°F</td><td>SSW, 9 mph</td><td class="num">36 mph</td><td>Rising 30.10–30.16</td><td>First Quarter, 49%</td><td>7:33 AM / 6:23 PM</td></tr></tbody></table></div>
+<h3 id="weather-analysis">Weather and deer activity</h3><p class="caption">Sighting and harvest rates compared with each hunt day’s temperature, wind, pressure, and moon. These comparisons are observational.</p><ul class="wx-analysis"><li>Over 3 hunt days with at least 8 hunter-hours, hunters saw 18.5 deer per 100 hours and recorded 40 harvests in 430 sits. With only 3 hunt days, these patterns are suggestive, not conclusive.</li><li>The colder day (Oct 16, 35–52°F) had 20.5 per 100 hours and 20 harvests in 152 sits (13.2 per 100 sits), compared with 15.2 per 100 hours and 5 harvests in 125 sits (4.0 per 100 sits) on the warmer day (Oct 18, 47–71°F).</li><li>Days with rising pressure (Oct 16 and Oct 18) and days with falling pressure (Oct 17) had similar sighting and harvest rates (18.3 per 100 hours and 25 harvests in 277 sits (9.0 per 100 sits) vs 19.0 per 100 hours and 15 harvests in 153 sits (9.8 per 100 sits)).</li><li>Sits that started in the morning had 16.2 per 100 hours and 24 harvests in 252 sits (9.5 per 100 sits), with sit-time temperatures around 48°F. Afternoon sits had 24.0 per 100 hours and 16 harvests in 178 sits (9.0 per 100 sits), with sit-time temperatures averaging 59°F.</li></ul>
 <h2 id="notes">Notes</h2>
-<ul><li>Hunt days are Oct 16–18, as listed on the MBRB hunt page. Stand-setup day (Oct 15) and any sits on other dates are not in the statistics.</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. A harvest is dated from the hunter’s matching sit when the logged date has no sit; otherwise the date is as entered in the app.</li></ul>
-<footer>Elm Creek Park Reserve · MBRB hunt 12 · 2026 app data · report generated Nov 16, 2026 9:07 PM CT</footer>
+<ul><li>Hunt days are Oct 16–18, as listed on the MBRB hunt page. Stand-setup day (Oct 15) and any sits on other dates are not in the statistics.</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. A harvest is dated from the hunter’s matching sit when the logged date has no sit; otherwise the date is as entered in the app.</li><li>Weather is hourly Open-Meteo data at the park centre. The weather analysis covers hunt days only (no setup days) and is observational — with few days it is suggestive, not conclusive.</li></ul>
+<footer>Elm Creek Park Reserve · MBRB hunt 12 · 2026 app data · report generated Nov 17, 2026 8:23 AM CT</footer>
 </main>
 <script>
 const COL=["#2f5d3a"];
